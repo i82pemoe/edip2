@@ -25,7 +25,7 @@ void Donante::leerDonante(){
   do{
     cout << "Introduzca grupo sanguineo 0,A,B,AB" << endl;
   	cin >> grupoSanguineo;
-    if(((grupoSanguineo == "") || (grupoSanguineo == "0") || (grupoSanguineo == "A") || (grupoSanguineo == "B") || (grupoSanguineo == "AB"))){
+    if((grupoSanguineo == "") || (grupoSanguineo == "0") || (grupoSanguineo == "A") || (grupoSanguineo == "B") || (grupoSanguineo == "AB")){
       aux = 0;
     }
     else{
@@ -66,6 +66,8 @@ ostream &operator << (ostream &stream, Donante const &p){
   stream << "Factor RH: ";
   stream << p._factorRH;
   stream << endl;
+
+  return stream;
 }
 
 istream &operator >> (istream &stream, Donante &p){

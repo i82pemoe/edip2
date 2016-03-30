@@ -28,12 +28,15 @@ class Donante:public DonanteInterfaz{
       setGrupoSanguineo(p.getGrupoSanguineo());
       setFactorRH(p.getFactorRH());
     }
+
     inline void setNombre(const string &nombre){
       _nombre = nombre;
     }
+
     inline void setApellido(const string &apellido){
       _apellido = apellido;
     }
+
     inline void setGrupoSanguineo(const string &grupoSanguineo){
       if ((grupoSanguineo == "") || (grupoSanguineo == "0") || (grupoSanguineo == "A") || (grupoSanguineo == "B") || (grupoSanguineo == "AB")){
         _grupoSanguineo = grupoSanguineo;
@@ -82,7 +85,7 @@ class Donante:public DonanteInterfaz{
     }
 
     inline bool operator == (Donante const &p){
-      if ((getNombre() == p.getNombre()) && (getApellido() == p.getApellido()) && (getGrupoSanguineo() == p.getGrupoSanguineo()) && (getFactorRH() == p.getFactorRH())){
+      if ((getNombre() == p.getNombre()) && (getApellido() == p.getApellido())){
         return true;
       }
       else{

@@ -40,12 +40,11 @@ int main(void){
     std::cout << "0.Salir" << std::endl;
     std::cout << "Introduzca opcion" << std::endl;
     std::cin >> opcion;
+    getchar();
 
     switch (opcion) {
       case 1:
-        getchar();
         p2.leerDonante();
-        getchar();
         printf("pulse ");
         SUBRAYADO;
         printf("ENTER");
@@ -59,7 +58,6 @@ int main(void){
         break;
       case 2:
         p2.escribirDonante();
-        getchar();
         printf("pulse ");
         SUBRAYADO;
         printf("ENTER");
@@ -72,9 +70,7 @@ int main(void){
         BORRAR;
         break;
       case 3:
-        getchar();
         p2.leerDonante();
-        getchar();
         printf("pulse ");
         SUBRAYADO;
         printf("ENTER");
@@ -88,11 +84,13 @@ int main(void){
         break;
 
       case 4:
+        p2.escribirDonante();
+        p1.escribirDonante();
         if (p2 <= p1){
-          std::cout << "p2 va antes que p1" << std::endl;
+          std::cout << "Donante 2 va antes que donante 1" << std::endl;
         }
         else{
-          std::cout << "Mal" << std::endl;
+          std::cout << "Donante 1 va antes que donate 2" << std::endl;
         }
         printf("pulse ");
         SUBRAYADO;
